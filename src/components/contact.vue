@@ -1,0 +1,124 @@
+<template>
+    <v-container class='contact pa-6'>
+        <h2 class='cormorant'>
+           Contact
+        </h2>
+        <v-form ref='form'>
+        <v-text-field
+            :rules='nameRules'
+            v-model='name'
+            dark color='#66f2f1'
+            class='text-field mono mb-6'
+            placeholder="name"
+            outlined 
+            >
+        </v-text-field>
+         <v-text-field
+            
+            :rules='emailRules'
+            v-model='email'
+            dark color='#66f2f1'
+            class='text-field mono mb-6'
+            placeholder="email"
+            outlined 
+            >
+        </v-text-field>
+        <v-textarea
+            :rules='messageRules'
+            v-model='message'
+            background-color="black"
+            class='mono  mb-6'
+            label="message"
+            dark
+            color='#66f2f1'
+            outlined
+        ></v-textarea>
+        <v-btn outlined medium
+            @click='submit()'
+            :loading='loading'
+            class='mono btn' 
+            color='#66f2f6'>
+            Submit
+        </v-btn>
+        </v-form>
+
+
+    </v-container>
+</template>
+
+<script>
+    export default { 
+        name: 'contact',components: {
+
+        },
+        data(){ 
+            return{
+                loading:false,
+                name:'',
+                nameRules: [v => !!v || 'Name is required'],
+                email:'',
+                emailRules: [
+                    v => !!v || 'E-mail is required',
+                    v => /.+@.+/.test(v) || 'E-mail must be valid',
+                  ],
+                message:'',
+                messageRules: [v => !!v || 'Message cant be empty'],
+
+                }
+        },
+        methods:{
+            submit(){
+                if(this.$refs.form.validate()){
+                   this.$refs.form.reset();
+                    this.$refs.form.resetValidation();
+                }
+                this.loading=true;
+                //fetch the api
+                setTimeout(() => 
+                    { this.loading=false;
+                     // this.name='';
+                      //this.email='';
+                     // this.message='';
+                    }, 2000
+                );
+
+                
+                
+            }
+        }
+    }    
+</script>
+
+<style scoped>
+.contact{
+    
+    background-color: #1F2833;
+}
+
+.contact>h2 {
+    text-align: center;
+    color: #66f2f1;
+    font-size:32px;
+}
+.contact>h2::after {
+    content: ""; /* This is necessary for the pseudo element to work. */ 
+    display: block; /* This will put the pseudo element on its own line. */
+    margin: 0 auto; /* This will center the border. */
+    width: 20%; /* Change this to whatever width you want. */
+    padding-top:2px; /* This creates some space between the element and the border. */
+    margin-bottom: 8px;
+    border-bottom: 5px solid #f2f2f2; /* This creates the border. Replace black with whatever color you want. */
+}
+.text-field{
+    height:55px;
+    padding:0;
+    background-color:black;;
+}
+.btn{
+    width:28%;
+    margin-top:-10px;
+    margin-left:69%;
+    border-width:3px ;
+}
+
+</style>
