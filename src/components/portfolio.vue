@@ -1,13 +1,14 @@
 <template>
-    <v-container fluid class='ma-0 portfolio'>
+    <v-container fluid class='ma-0 portfolio' id='portfolio'>
         <h2 class='page-title pa-2 text-uppercase cormorant'
             >
             Portfolio
         </h2>
         <v-container fluid class="projects pa-4">
             <v-row align="center"
-      justify="center">
-                <v-column v-for='item in items' :key='item.src'
+                justify="center" v-for='(chunk,index) in projectChunks'
+                :key ='index'>
+                <v-column v-for='project in chunk' :key='project.img'
                     columns='12'
                     sm='6'>
                         <v-card
@@ -16,7 +17,7 @@
                           elevation="2"
                           round
                         >
-                        <v-img :src='item.src'
+                        <v-img :src='project.img'
                             width='300px'     
                             height='240px'>
                             
@@ -37,19 +38,20 @@
             name: 'portfolio ',components: {
 
             } ,
+            mounted(){
+                this.$store.dispatch('getProjects')
+            },
             data () {
               return {
-                items: [
-              {
-                src:'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTc07deu94DwzBJyiEdlhzsCB-hCYbPK1GitA&usqp=CAU',
-              },
-              {
-                src:'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTc07deu94DwzBJyiEdlhzsCB-hCYbPK1GitA&usqp=CAU',
-              },
-            
-            ],
-          }
-        },
+                    
+              }
+            },
+            computed:{
+                projectChunks(){
+                    return this.$store.getters.projectChunks
+                }
+            }
+
     }    
 </script>
 

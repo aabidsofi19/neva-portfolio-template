@@ -1,5 +1,5 @@
 <template>
-    <v-container class='contact pa-6'>
+    <v-container class='contact pa-6' id='contact'>
         <h2 class='cormorant'>
            Contact
         </h2>
@@ -47,6 +47,7 @@
 </template>
 
 <script>
+    import axios from 'axios';
     export default { 
         name: 'contact',components: {
 
@@ -54,43 +55,50 @@
         data(){ 
             return{
                 loading:false,
-                name:'',
+                name:"" ,
                 nameRules: [v => !!v || 'Name is required'],
-                email:'',
+                email:"",
                 emailRules: [
                     v => !!v || 'E-mail is required',
                     v => /.+@.+/.test(v) || 'E-mail must be valid',
                   ],
-                message:'',
+                message:"",
                 messageRules: [v => !!v || 'Message cant be empty'],
 
                 }
         },
         methods:{
-            submit(){
-                if(this.$refs.form.validate()){
-                   this.$refs.form.reset();
-                    this.$refs.form.resetValidation();
-                }
-                this.loading=true;
-                //fetch the api
-                setTimeout(() => 
-                    { this.loading=false;
-                     // this.name='';
-                      //this.email='';
-                     // this.message='';
-                    }, 2000
-                );
 
+            submit(){
+                this.loading=true;
+                if(this.$refs.form.validate()){
+                //fetch the api
+                let url='http://127.0.0.1:8000/submit_message';
+                let  params={
+                    name:this.name,
+                    email:this.email,
+                    message:this.message,
+                };
+                console.log(JSON.stringify(params))
+                axios.post(url,params)
+                    .then((res)=>{
+                        console.log(JSON.stringify(res));
+                        this.loading=false;
+                        this.$refs.form.reset();
+                        this.message='message sent successfull';
+                     })             
+                 }
+                this.loading=false;                  
+            },        
+        },
                 
-                
-            }
-        }
     }    
-</script>
+        </script>
 
 <style scoped>
 .contact{
+    margin:auto;
+    margin-bottom: 20%;
     
     background-color: #1F2833;
 }

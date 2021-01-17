@@ -1,6 +1,6 @@
 <template>
 <v-container class="mt-10 ">
-    <div ref='intro' class="intro text-uppercase
+    <div id='intro' class="intro text-uppercase
         text-centre white--text mono">
         
         <span class='mono'>
@@ -21,7 +21,7 @@
         </span>
             <v-btn icon color='#66fcf1' 
                 large
-                @click='scrolldown()'
+                to='/#about-me'
                 class ='mt-10'>
             <v-icon>
                 mdi-chevron-double-down
@@ -38,24 +38,22 @@
 
         } ,
         methods:{
-            scrolldown(){
-                console.log('hi');}
-                
-    },
+            }
     }
 </script>
 
 <style scoped>
 .intro {
+    font-family:'DM Mono', monospace ;
     margin:auto;
-    margin-top: 30%;
     font-size: 1.6rem;
-    text-align: center;
+   text-align: center;
+    padding-top:10%;
 }
 div > span:first-child{
     margin-bottom: -20px;
     font-size:5rem;
-    font-weight: 900;
+    font-weight: bold;
     color:#66FCF1 ;
     display: block;
     letter-spacing: -2px;

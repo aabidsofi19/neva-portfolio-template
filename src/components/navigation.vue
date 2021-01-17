@@ -22,10 +22,11 @@
     but hey, it's pure CSS magic.
     -->
     <ul id="menu">
-      <a href="#"><li>Home</li></a>
-      <a href="#"><li>About</li></a>
-      <a href="#"><li>Info</li></a>
-      <a href="#"><li>Contact</li></a>
+      <router-link to="/"><li>Home</li></router-link>
+      <router-link to="/#about-me"><li>About</li></router-link>
+      <router-link to='/#portfolio'><li>Portfolio</li></router-link>
+      <router-link to="/#contact"><li>Contact</li></router-link>
+      <router-link to="/#footer"><li>Info</li></router-link>
       
     </ul>
   </div>

@@ -1,5 +1,5 @@
 <template>
-    <v-footer ref='footer' paddless default class='footer black'>
+    <v-footer ref='footer' paddless default class='footer black' id='footer'>
         <v-btn icon @click='scrolltop' color='#66fcf1' class='up' tile>
             <v-icon>
                 mdi-chevron-double-up
@@ -8,9 +8,10 @@
         <v-container fluid class="social-icons" 
             >
             <v-btn icon color='#f1f1f1' class='d-inline-block icon'
-                tile v-for='icon in icons ' :key='icon'>
-                <v-icon class=''>
-                    {{icon}}
+               tile  v-for='i in socialmedia ' :key='i.icon' 
+                :href='i.src' target="_blank" elevation='10' >
+                <v-icon center>
+                    {{i.icon}}
                 </v-icon>
                 
             </v-btn>
@@ -31,9 +32,15 @@
         },
         data(){
             return{
-                icons:['mdi-facebook','mdi-linkedin','mdi-github','mdi-instagram']
+                
             }
             
+        },
+        computed:{
+            socialmedia(){
+                return this.$store.state.Sociallinks
+                
+            }
         },
         methods:{
             scrolltop(){
@@ -62,11 +69,14 @@
     padding:auto;
 }
 .icon {
+    text-align: center;
+    padding-top: 2%;
     background-color: #414a4c;
-    margin:20px;
+    margin-left: 20px;
 }
 
 .copyright{
+    margin-top:5px;
     font-size:16px;
     text-align: center;
     color:#414a4c;

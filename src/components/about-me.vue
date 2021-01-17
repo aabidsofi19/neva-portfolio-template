@@ -1,5 +1,5 @@
 <template>
-    <v-container fluid class='aboutme'>
+    <v-container fluid class='aboutme' id='about-me'>
         <h2 class='cormorant pt-5'>
             About Me
         </h2>

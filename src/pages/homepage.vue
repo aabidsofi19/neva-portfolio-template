@@ -1,10 +1,16 @@
 <template>
     <v-container fluid class='homepage ma-0 pa-0' app >
         <navigation id='nav'></navigation>
+
         <heroVideo></heroVideo>
         <introduction class='intro'></introduction>
         <aboutMe></aboutMe>
+
+        <divider></divider>
         <portfolio></portfolio>
+
+        <divider></divider>
+
         <contact></contact>
         <myFooter></myFooter>
         
@@ -21,6 +27,7 @@
     import contact from '../components/contact.vue'
     import myFooter from '../components/footer.vue'
     import navigation from '../components/navigation.vue'
+    import divider from '../components/divider.vue'
     export default { 
         name: 'homepage',components: {
             navigation,
@@ -29,7 +36,8 @@
             aboutMe,
             portfolio,
             contact,
-            myFooter
+            myFooter,
+            divider
 
         } 
     }    
@@ -44,9 +52,12 @@
     z-index: 4;
 }
 .intro {
-    height:80vh;
+    height:35rem;
+    min-height:20rem;
+    width: 100%;
+    overflow: hidden;
     position: relative;
-    margin-top:10px;
+    margin-top:;
     z-index: 2;
 }
 
