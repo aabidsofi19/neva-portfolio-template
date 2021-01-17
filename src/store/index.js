@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 
-import axios from 'axios';
+import {client} from '../axiosClient'
 import _ from 'lodash';
 
 
@@ -45,8 +45,8 @@ export default new Vuex.Store({
     },
     actions:{
         async getProjects({commit}){
-            let url='http://localhost:8000/projects'
-            let res=await axios.get(url);
+            //let url='http://localhost:8000/projects'
+            let res=await client.get('projects');
             console.log(JSON.stringify(res));
             commit('addProjects',res.data);
             

@@ -47,7 +47,7 @@
 </template>
 
 <script>
-    import axios from 'axios';
+    import {client} from '../axiosClient.js';
     export default { 
         name: 'contact',components: {
 
@@ -73,14 +73,14 @@
                 this.loading=true;
                 if(this.$refs.form.validate()){
                 //fetch the api
-                let url='http://127.0.0.1:8000/submit_message';
+                //let url='http://127.0.0.1:8000/submit_message';
                 let  params={
                     name:this.name,
                     email:this.email,
                     message:this.message,
                 };
                 console.log(JSON.stringify(params))
-                axios.post(url,params)
+                client.post('submit_message',params)
                     .then((res)=>{
                         console.log(JSON.stringify(res));
                         this.loading=false;
