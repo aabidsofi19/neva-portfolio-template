@@ -7,10 +7,12 @@
         </v-btn>
         <v-container fluid class="social-icons" 
             >
-            <v-btn icon color='#f1f1f1' class='d-inline-block icon'
+            <v-btn icon  color='#f1f1f1' class='d-inline-block ma-2 pa-2 icon'
                tile  v-for='i in socialmedia ' :key='i.icon' 
-                :href='i.src' target="_blank" elevation='10' >
-                <v-icon center>
+                :href='i.src' target="_blank" elevation='10'
+                large
+                >
+                <v-icon >
                     {{i.icon}}
                 </v-icon>
                 
@@ -60,19 +62,22 @@
 .up{
     height:40px;
     background-color: #ff2400;
-    margin-left: 45%;
+    margin: auto;
     margin-top:-18px;
     
 }
 .social-icons {
+    display: block;
+    
     text-align: center;
     padding:auto;
 }
 .icon {
-    text-align: center;
-    padding-top: 2%;
+    vertical-align: middle;
     background-color: #414a4c;
-    margin-left: 20px;
+    margin: auto;
+    padding: auto;
+    height: 40x;
 }
 
 .copyright{

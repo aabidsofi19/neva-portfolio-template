@@ -4,7 +4,7 @@
             About Me
         </h2>
         <p class='mono white--text pa-4'>
-            Myself Aabid Sofi, and i am a software engineer and a fullstack  webdeveloper. I am frameworks and language agnostic. In backend development I have strong proficiency in python,django,flask,fastapi,graphql,RESTfull apis. I have great expertise with frontend tech like HTML5,CSS3,JS and frameworks like vuejs.I am also pretty with both SQL and NoSql databases.
+            Myself Aabid Sofi, and i am a software engineer and a fullstack  webdeveloper.I am frameworks and language agnostic. In backend development I have strong proficiency in python,django,flask,fastapi,graphql,RESTfull apis. I have great expertise with frontend tech like HTML5,CSS3,JS and frameworks like vuejs.I am also pretty with both SQL and NoSql databases.
         </p>
 
     </v-container>
@@ -23,6 +23,7 @@
     width:100%;
     text-align: left;
     overflow: hidden;
+    overflow-wrap: break-word;
     text-overflow:wrap;
     
 }

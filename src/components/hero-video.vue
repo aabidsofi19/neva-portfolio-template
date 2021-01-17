@@ -21,7 +21,7 @@
 .background-video{
     object-fit: cover;
     width: 100%;
-    height: 35rem;
+    height: 35em;
     min-height: 20rem;
     overflow: hidden;
     position: absolute;

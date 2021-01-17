@@ -2,7 +2,7 @@
 <v-container class="mt-10 ">
     <div id='intro' class="intro text-uppercase
         text-centre white--text mono">
-        
+     <h1 class='mono intro'> 
         <span class='mono'>
             Hello
         </span>
@@ -19,6 +19,7 @@
             Software Engineer And 
             Web developer.
         </span>
+    </h1>
             <v-btn icon color='#66fcf1' 
                 large
                 to='/#about-me'
@@ -50,7 +51,7 @@
    text-align: center;
     padding-top:10%;
 }
-div > span:first-child{
+h1 > span:first-child{
     margin-bottom: -20px;
     font-size:5rem;
     font-weight: bold;
@@ -58,15 +59,15 @@ div > span:first-child{
     display: block;
     letter-spacing: -2px;
 }
-div >span:nth-of-type(2){
+h1 >span:nth-of-type(2){
     font-weight: bold;
     color:White;
 }
-div>span:nth-of-type(3){
+h1>span:nth-of-type(3){
     font-weight: bold;
     color: #45A29E;
 }
-div>span:nth-of-type(4) {
+h1>span:nth-of-type(4) {
     display: block;
     color:white;
     

@@ -99,7 +99,8 @@
 .contact{
     margin:auto;
     margin-bottom: 20%;
-    
+    width:20rem;
+    min-width:50%;
     background-color: #1F2833;
 }
 
