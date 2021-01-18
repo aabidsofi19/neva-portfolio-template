@@ -5,7 +5,7 @@
     A fake / hidden checkbox is used as click reciever,
     so you can use the :checked selector on it.
     -->
-    <input type="checkbox" />
+    <input type="checkbox" ref='checkbox'/>
     
     <!--
     Some spans to act as a hamburger.
@@ -22,12 +22,12 @@
     but hey, it's pure CSS magic.
     -->
     <ul id="menu">
-      <router-link to="/"><li>Home</li></router-link>
-      <router-link to="/#about-me"><li>About</li></router-link>
-      <router-link to='/#portfolio'><li>Portfolio</li></router-link>
-      <router-link to="/#contact"><li>Contact</li></router-link>
-      <router-link to="/#footer"><li>Info</li></router-link>
-      
+      <router-link to="/"><li @click='close()'>Home</li></router-link>
+      <router-link to="/#about-me"><li @click='close()'>About</li></router-link>
+      <router-link to='/#portfolio'><li @click='close()'>Portfolio</li></router-link>
+      <router-link to="/#contact"><li @click='close()'>Contact</li></router-link>
+      <router-link to="/#footer"><li @click='close()'>Info</li></router-link>
+
     </ul>
   </div>
 </nav>
@@ -37,7 +37,14 @@
     export default { 
         name: 'navigation',components: {
 
-        } 
+        },
+        methods:{
+            close(){
+                let b=this.$refs.checkbox;
+                b.checked=false;
+            
+            }
+        }
     }    
 </script>
 
