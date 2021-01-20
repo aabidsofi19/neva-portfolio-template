@@ -53,7 +53,7 @@
 }
 .intro {
     height:35rem;
-    min-height:20rem;
+    min-height:50vh;
     width: 100%;
     overflow: hidden;
     position: relative;

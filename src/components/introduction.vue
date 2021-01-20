@@ -51,6 +51,7 @@
    text-align: center;
     padding-top:10%;
 }
+
 h1 > span:first-child{
     margin-bottom: -20px;
     font-size:5rem;
