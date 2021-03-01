@@ -27,7 +27,7 @@
       <router-link to='/#portfolio'><li @click='close()'>Portfolio</li></router-link>
       <router-link to="/#contact"><li @click='close()'>Contact</li></router-link>
       <router-link to="/#footer"><li @click='close()'>Info</li></router-link>
-
+      <a href="/blog"> <li> Blog </li></a>
     </ul>
   </div>
 </nav>
