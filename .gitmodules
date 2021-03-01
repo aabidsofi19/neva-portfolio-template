@@ -1,6 +1,4 @@
-[submodule "aabid_blog"]
-	path = aabid_blog
-	url = https://github.com/aabidsofi19/aabid_blog/
+
 [submodule "blog"]
 	path = blog
-	url = https://github.com/aabidsofi19/aabid_blog/
+	url = git@github.com:aabidsofi19/aabid_blog.git ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDBuyx6rfovUgCvqF+Tjpu2J97c+DWKbZa46pocIZdZWuzBhoUcLavc73jtig6ejirA1oPmHRpSRc3GHIFpyS/vvOEvT66YBLw81HvelG7T4ltehmtvtdEWCBBr7cP+iE4S70x3ySVZKKjtCpegrbqblpbv7k+Zao1rMhMXOUKhDXspFZFOGKYXE8/N9A6AsPFLoCJ6CfSC2bCa06dFLsvals8ER5tZUjOZSdkJQyU3Z9bmOfOMT4UiTT9YoesOnXb+1FIfj8O0FHa83TEM8wpAF+/4JFvdZw4ARFecSn8HVWwzBHYVb8/bgy34ZDgpTmCmahIhUn67RuUhqa7GEQLeGaWo/17ceGIsh19zBiCtRW3fn9WvZeGKYrgdDECU9IrUrHEqilir5rN0E6/33aFEwrVdfxjmMwqiFmsSNPO3Q88XUL4ZgTjkF+KdbOYrV7OP3TOuJtrPHSUqXWzrOYWQI64Hux5oeoPmy+lq0Gkq6eA8UOl+HTlIqVr9H72Eyk50/Nv7AEGZAfxgVowO19mAMzQOlwB8ukGczfNQLLEtwT2KY0QmIU6NJsBrI7OUZ4TJhoK8O+uFdBFNld2RFlWjCvnJZNRgh8lgxlTDiZ04Yb8HDz5ZLj0t5tS16z1OYF9cw1XJ7c4uQWblJCiGqbATpPbXTolFo5eKMhHq5XEJVQ==
