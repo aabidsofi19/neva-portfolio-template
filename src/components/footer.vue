@@ -21,7 +21,7 @@
                 <span>
                     <v-icon color='#f88379' class='copyright-icon my-auto' size='16px'>
                         mdi-copyright 
-                    </v-icon>2020
+                    </v-icon>{{ year }}
                 </span> 
             </p>
         </v-container>
@@ -42,6 +42,10 @@
             socialmedia(){
                 return this.$store.state.Sociallinks
                 
+            },
+            year(){
+                var d = new Date();
+                return  d.getFullYear();
             }
         },
         methods:{
