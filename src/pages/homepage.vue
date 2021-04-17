@@ -13,7 +13,7 @@
 
         <contact></contact>
         <myFooter></myFooter>
-        
+    
         
 
     </v-container>
@@ -27,6 +27,7 @@
     import contact from '../components/contact.vue'
     import myFooter from '../components/footer.vue'
     import navigation from '../components/navigation.vue'
+    
     import divider from '../components/divider.vue'
     export default { 
         name: 'homepage',components: {
@@ -40,7 +41,8 @@
             divider
 
         } 
-    }    
+    }  
+      
 </script>
 
 <style scoped >
