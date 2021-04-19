@@ -35,7 +35,7 @@ export default new Vuex.Store({
   },
     mutations:{
         addProjects(state,projects){
-            state.projects.push(...projects)   
+            state.projects = projects
         }
     },
     getters:{
@@ -49,11 +49,11 @@ export default new Vuex.Store({
             let res=await client.get('projects');
             console.log(JSON.stringify(res));
             commit('addProjects',res.data);
-            
+
         }
 
     }
-    
-  
-  
+
+
+
 })
