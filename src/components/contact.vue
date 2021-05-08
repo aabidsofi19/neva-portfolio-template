@@ -96,8 +96,8 @@
 .contact{
     margin:auto;
     margin-bottom: 20%;
-    width:30vw;
-    min-width:25rem;
+    width:70%;
+    max-width:35rem;
     background-color: #fff;
 }
 
