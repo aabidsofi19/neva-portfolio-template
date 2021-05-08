@@ -24,31 +24,24 @@ export default {
 
 <style>
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');/*serif*/
-@import url("https://fonts.googleapis.com/css?family=Cormorant+Garamond:400,700");
 @import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@500&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 body{
     font-family: 'Khula', sans-serif;
 }
+
 .mono{
   font-family: "DM Mono", Monospace;
-  
   font-weight: bold;
 }
 
-
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 400;
+.montserrat{
+  font-family: 'Montserrat', sans-serif;
 }
 
-.cormorant{
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 700;
-    font-size: 13px;
-    
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 </style>
 

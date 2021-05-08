@@ -1,24 +1,22 @@
 <template>
-    <v-container class='contact pa-6' id='contact'>
-        <h2 class='cormorant'>
+    <v-container class='contact pa-2' id='contact'>
+        <h2 class='mono'>
            Contact
         </h2>
         <v-form ref='form'>
         <v-text-field
             :rules='nameRules'
             v-model='name'
-            dark color='#66f2f1'
-            class='text-field mono mb-6'
+            
+            class='text-field montserrat mb-6'
             placeholder="name"
             outlined 
             >
         </v-text-field>
          <v-text-field
-            
             :rules='emailRules'
             v-model='email'
-            dark color='#66f2f1'
-            class='text-field mono mb-6'
+            class='text-field montserrat mb-6'
             placeholder="email"
             outlined 
             >
@@ -26,18 +24,17 @@
         <v-textarea
             :rules='messageRules'
             v-model='message'
-            background-color="black"
-            class='mono  mb-6'
+            background-color="#d3d3d3"
+            class='montserrat mb-6'
             label="message"
-            dark
-            color='#66f2f1'
+            
             outlined
         ></v-textarea>
         <v-btn outlined medium
             @click='submit()'
             :loading='loading'
-            class='mono btn' 
-            color='#66f2f6'>
+            class='montserrat btn' 
+            color='#a9a9a9'>
             Submit
         </v-btn>
         </v-form>
@@ -99,15 +96,15 @@
 .contact{
     margin:auto;
     margin-bottom: 20%;
-    width:20rem;
-    min-width:50%;
-    background-color: #1F2833;
+    width:30vw;
+    min-width:25rem;
+    background-color: #fff;
 }
 
 .contact>h2 {
     text-align: center;
-    color: #66f2f1;
-    font-size:32px;
+    color: #a9a9a9;
+    font-size: calc(1rem + 4vw );
 }
 .contact>h2::after {
     content: ""; /* This is necessary for the pseudo element to work. */ 
@@ -121,8 +118,15 @@
 .text-field{
     height:55px;
     padding:0;
-    background-color:black;;
+    background-color: #d3d3d3;
 }
+
+.text-field{
+    height:55px;
+    padding:0;
+    background-color: lightgrey;
+}
+
 .btn{
     width:28%;
     margin-top:-10px;

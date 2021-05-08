@@ -1,9 +1,9 @@
 <template>
-    <v-container fluid class='aboutme' id='about-me'>
-        <h2 class='cormorant pt-5'>
+    <v-container  class='aboutme ' id='about-me'>
+        <h2 class='mono pt-5'>
             About Me
         </h2>
-        <p class='mono white--text pa-4'>
+        <p class='montserrat pa-4'>
             Myself Aabid Sofi, and i am a software engineer and a fullstack  webdeveloper.I am frameworks and language agnostic. In backend development I have strong proficiency in python,django,flask,fastapi,graphql,RESTfull apis. I have great expertise with frontend tech like HTML5,CSS3,JS and frameworks like vuejs.I am also pretty with both SQL and NoSql databases.
         </p>
 
@@ -19,8 +19,13 @@
 </script>
 
 <style scoped> 
+.aboutme{
+    margin-top: 10vh ;
+}
 .aboutme>p{
+    font-size: calc(1rem + 1vw);
     width:100%;
+    font-weight: medium;
     text-align: left;
     overflow: hidden;
     overflow-wrap: break-word;
@@ -28,7 +33,9 @@
     
 }
 .aboutme>h2 {
+    color:darkgrey;
     text-align: center;
+    font-size: calc(1rem + 4vw);
     
 }
 .aboutme>h2::after {

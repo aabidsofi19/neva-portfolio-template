@@ -22,7 +22,7 @@
     object-fit: cover;
     width: 100%;
     height: 35em;
-    min-height: 50vh;
+    min-height: 100vh;
     overflow: hidden;
     position: absolute;
     top: 0;

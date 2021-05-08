@@ -47,7 +47,7 @@
 
 <style scoped >
 .homepage{
-    background-color: #1F2833;
+    background-color:  #ffff;
 }
 #nav{
     position: fixed;
@@ -55,11 +55,11 @@
 }
 .intro {
     height:35rem;
-    min-height:50vh;
+    min-height:90vh;
     width: 100%;
     overflow: hidden;
     position: relative;
-    margin-top:;
+    /*margin-top:; */
     z-index: 2;
 }
 
