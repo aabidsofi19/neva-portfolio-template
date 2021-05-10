@@ -1,7 +1,7 @@
 <template>
     <v-container class="d-flex align-center justify-center ">
         <div id='intro' class="intro text-uppercase
-            white--text mono d-flex flex-col justify-center align-center">
+            white--text mono d-flex flex-column justify-center align-center">
             <h1 class='mono intro'> 
                 <span class='mono'>
                     Hello
