@@ -24,15 +24,26 @@ export default {
 
 <style>
 
-@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@500&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+:root{
+
+  --main-bg-color :#1a1a1d;
+  --gray : #4e4e50;
+  --highlight-color : #950740;
+  --accent-color:#c30734;
+  --dark-accent : #6f2232;
+  --primary-font : 'Montserrat', sans-serif;
+  --secondary-font :  'Work Sans', sans-serif; 
+}
+
 body{
     font-family: 'Khula', sans-serif;
 }
 
-.mono{
-  font-family: "DM Mono", Monospace;
-  font-weight: bold;
+.work-sans{
+  font-family: 'Work Sans', sans-serif;
+  
 }
 
 .montserrat{
@@ -42,6 +53,16 @@ body{
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+ font-family: 'Work Sans', sans-serif;
+ font-weight: 300;
+}
+
+h1, h2, h3, h4, h5, h6 {
+ font-family: 'Montserrat', sans-serif;
+ font-weight: 900;
 }
 </style>
 
