@@ -1,6 +1,6 @@
 <template>
     <v-container fluid class='ma-0 portfolio' id='portfolio'>
-        <h2 class='page-title pa-2 text-uppercase mono'>
+        <h2 class=''>
             Portfolio
         </h2>
         <v-container fluid class="projects pa-4">
@@ -13,12 +13,13 @@
                     <v-hover v-slot='{hover}'>
                        <v-card                          
                           class='mb-4 ml-1 grey project'  elevation="2"   round  >
-                          <v-img :src='project.img'  width='auto'    height='auto' >
-                               <!-- width='300px'    height='240px' -->
+
+                          <v-img :src='project.img'  width='500px'  height='340px' >
+                               <!--' -->
                               <v-expand-transition>
                                 <div
                                     v-if="hover" style="height: 100%;"
-                                    class="d-flex flex-column transition-fast-in-fast-out orange darken-2 v-card--reveal  white--text pa-3 justify-center align-center card-reveal" >
+                                    class="d-flex flex-column transition-fast-in-fast-out  red darken-2 v-card--reveal  white--text pa-3 justify-center align-center card-reveal" >
                                     <span class='my-2  mono' id='project_name'  > 
                                         {{project.name}}
                                     </span>
@@ -52,7 +53,7 @@
 
     } ,
     mounted(){
-        this.$store.dispatch('getProjects')
+        // this.$store.dispatch('getProjects')
     },
     data () {
       return {
@@ -99,22 +100,23 @@
   margin-right:12px;
 
 }
+
+
 .portfolio>h2{
-    
-    color: darkgrey;
-    font-size:calc(1rem + 4vw);
+
+    padding-left: 9%;
+    text-transform: uppercase;
     font-weight: bold;
+    color:var(--accent-color);
+    padding-block:10;
     text-align: center;
-}
-.page-title:after {
-    content: ""; /* This is necessary for the pseudo element to work. */ 
-    display: block; /* This will put the pseudo element on its own line. */
-    margin: 0 auto; /* This will center the border. */
-    width: 30%; /* Change this to whatever width you want. */
-    padding-top:2px; /* This creates some space between the element and the border. */
-    margin-bottom: 8px;
-    border-bottom: 5px solid #f2f2f2; /* This creates the border. Replace black with whatever color you want. */
-}
+    padding-block: 6%;
+    font-size:2em;
+    
+    
+}/*  */
+
+
 .card-reveal{
     opacity: 0.85;
 }
@@ -124,6 +126,7 @@
 #project_name{
  font-size:28px;
 }
+
 .tech-icons{
     position: absolute;
     

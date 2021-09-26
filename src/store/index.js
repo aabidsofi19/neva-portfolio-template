@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 
-import {client} from '../axiosClient'
+// import {client} from '../axiosClient'
 import _ from 'lodash';
 
 
@@ -29,14 +29,30 @@ export default new Vuex.Store({
           }
       ],
       projects: [
+          {
+                name:"Quotsy",
+                description:"Quotes and Poetry Website.",
+                tech_stack:["Django"],
+                img:"https://res.cloudinary.com/dh3azc5sk/image/upload/v1618837712/Portfolio/20210324_134333_0000_thm6ye.png",
+                url:"https://quotsy.herokuapp.com"
+            },
+            {
+                name:"My Personal Blog",
+                description:"For coding and Tech geeks",
+                tech_stack:["Django"],
+                img:"https://res.cloudinary.com/dh3azc5sk/image/upload/v1618844291/Portfolio/20210419_202527_0000_kmbduf.png",
+                url:"https://aabidsofi.netlify.app/blog/posts"
+            },
+        
+        ]
 
-      ]
+      
 
   },
     mutations:{
-        addProjects(state,projects){
-            state.projects = projects
-        }
+        // addProjects(state,projects){
+        //     state.projects = projects
+        // }
     },
     getters:{
         projectChunks(state){
@@ -44,13 +60,13 @@ export default new Vuex.Store({
         }
     },
     actions:{
-        async getProjects({commit}){
-            //let url='http://localhost:8000/projects'
-            let res=await client.get('projects');
-            console.log(JSON.stringify(res));
-            commit('addProjects',res.data);
+        // async getProjects({commit}){
+        //     //let url='http://localhost:8000/projects'
+        //     let res=await client.get('projects');
+        //     console.log(JSON.stringify(res));
+        //     commit('addProjects',res.data);
 
-        }
+        // }
 
     }
 

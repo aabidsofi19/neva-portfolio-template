@@ -3,14 +3,19 @@
         <navigation id='nav'></navigation>
 
         <banner/>
-        <divider></divider>
+        <services/>
+        <about/>
         <portfolio></portfolio>
-
-        <divider></divider>
-
         <contact></contact>
         <myFooter></myFooter>
-    
+
+        <!-- <divider></divider>
+       
+        <divider></divider>
+
+       
+        
+     -->
         
 
     </v-container>
@@ -18,20 +23,24 @@
 
 <script>
     import banner from "../components/banner.vue"
+    import services from "../components/services.vue"
+    import about from "../components/about.vue"
     import portfolio from '../components/portfolio.vue'
     import contact from '../components/contact.vue'
     import myFooter from '../components/footer.vue'
     import navigation from '../components/navigation.vue'
     
-    import divider from '../components/divider.vue'
+    // import divider from '../components/divider.vue'
     export default { 
         name: 'homepage',components: {
             navigation,
             banner,
+            services,
+            about,
             portfolio,
             contact,
             myFooter,
-            divider
+            // divider
 
         } 
     }  
@@ -39,6 +48,10 @@
 </script>
 
 <style scoped >
+#nav{
+    position: fixed;
+    z-index: 4;
+}
 
 
 </style>

@@ -37,10 +37,6 @@ export default {
   --secondary-font :  'Work Sans', sans-serif; 
 }
 
-body{
-    font-family: 'Khula', sans-serif;
-}
-
 .work-sans{
   font-family: 'Work Sans', sans-serif;
   

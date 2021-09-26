@@ -1,5 +1,5 @@
 <template>
-<nav role="navigation">
+<nav role="navigation" class="">
   <div id="menuToggle">
     <!--
     A fake / hidden checkbox is used as click reciever,
@@ -104,7 +104,7 @@
   margin-bottom: 5px;
   position: relative;
 
-  background: #cdcdcd;
+  background: var(--highlight-color) ;
   border-radius: 3px;
 
   z-index: 1;
