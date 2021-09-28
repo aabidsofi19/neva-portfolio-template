@@ -23,11 +23,11 @@
     -->
     <ul id="menu">
       <router-link to="/"><li @click='close()'>Home</li></router-link>
-      <router-link to="/#about-me"><li @click='close()'>About</li></router-link>
+      <router-link to="/#about"><li @click='close()'>About</li></router-link>
       <router-link to='/#portfolio'><li @click='close()'>Portfolio</li></router-link>
       <router-link to="/#contact"><li @click='close()'>Contact</li></router-link>
       <router-link to="/#footer"><li @click='close()'>Info</li></router-link>
-      <a href="/blog/posts"> <li> Blog </li></a>
+     
     </ul>
   </div>
 </nav>
